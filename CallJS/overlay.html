@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- This is a modified version of the "Let It Snow" example from the
+     GirlieMac website (http://girliemac.com/sandbox/snow.hmtl) -->
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width">
+		<title>CSS Animation - Let It Snow!</title>
+		<style type="text/css" media="screen">
+		body {
+			margin: 0px;	
+		}
+		#container{		
+			background: transparent;
+			position: relative;		
+		}
+
+		@-webkit-keyframes fade{
+		    0%   { opacity: 0; }
+		    10%  { opacity: 0.8; }
+		    100% { opacity: 0; }
+		}
+		@-webkit-keyframes fall{
+		   	from {top: 10px;}
+			to {top: 600px;}
+		}
+		@-webkit-keyframes accumulate{
+		   	from {height: 0px; opacity: 0}
+			to {height: 20px; opacity: .75;}
+		}
+		@-webkit-keyframes spin{
+		    0%   { -webkit-transform: rotate(-180deg) translate(0px, 0px);}
+		    100% { -webkit-transform: rotate(180deg) translate(10px, 75px);}
+		}
+		#snow div {
+			position: absolute;
+			top: -40px;
+			-webkit-animation-name: fall, fade, spin;
+			-webkit-animation-iteration-count: infinite; /* use 0 to infinite */
+			-webkit-animation-direction: normal; /* default is normal. use 'alternate' to reverse direction */
+			-webkit-animation-timing-function: ease-in;
+		}
+		.snowflake {
+			color: blue;
+			font-size: 2em;
+			position: absolute;	
+		}
+		.snowflake.f1 {
+			left: 40px;
+			-webkit-animation-duration: 5s;	/* set duration indivisually */
+		}
+		.snowflake.f2 {
+			font-size: 1.8em;
+			left: 120px;
+			-webkit-animation-duration: 7s;	
+		}
+		.snowflake.f3 {
+			left: 200px;
+			-webkit-animation-duration: 8s;	
+		}
+		.snowflake.f4 {
+			font-size: 1.5em;
+			left: 280px;
+			-webkit-animation-duration: 6s;	
+		}
+		.snowflake.f5 {
+			left: 360px;
+			-webkit-animation-duration: 8s;	
+		}
+		.snowflake.f6 {
+			font-size: 3em;
+			left: 420px;
+			-webkit-animation-duration: 10s;	
+		}
+		.snowflake.f7 {
+			left: 500px;
+			-webkit-animation-duration: 8s;	
+		}
+		.snowflake.f8 {
+			font-size: 1.5em;
+			left: 580px;
+			-webkit-animation-duration: 4s;	
+		}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="snow" class="snow">	
+				<!-- Draw snowflakes without using images! -->
+				<div class="snowflake f1">&#10053;</div>
+				<div class="snowflake f2">&#10052;</div>
+				<div class="snowflake f3">&#10053;</div>
+				<div class="snowflake f4">&#10052;</div>
+				<div class="snowflake f5">&#10052;</div>
+				<div class="snowflake f6">&#10052;</div>
+				<div class="snowflake f7">&#10052;</div>
+				<div class="snowflake f8">&#10052;</div>
+			</div>
+		</div>
+	</body>
+</html>
+

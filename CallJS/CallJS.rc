@@ -1,0 +1,171 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_CALLJS              ICON                    "res\\CallJS.ico"
+IDR_MAINFRAME           ICON                    "res\\CallJS.ico"
+IDI_SMALL               ICON                    "small.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_WINLAUNCHER MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Print\tCtrl-P",              IDM_PRINT
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...",                  IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_WINLAUNCHER ACCELERATORS 
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 22, 17, 230, 75
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "System", 0, 0, 0x0
+BEGIN
+    ICON            IDI_CALLJS,IDI_CALLJS,14,9,20,20
+    LTEXT           "CallJS Version 1.2",IDC_STATIC,49,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2011",IDC_STATIC,49,20,119,8
+    DEFPUSHBUTTON   "OK",IDOK,195,6,30,11,WS_GROUP
+END
+
+IDD_CALLJS_DIALOG DIALOGEX 0, 0, 446, 391
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "CallJS"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Call JavaScript function with two parameters from C++",IDC_STATIC,8,1,424,69
+    LTEXT           "First and second parameters:",IDC_STATIC,23,18,115,8
+    LTEXT           "P1:",IDC_STATIC,36,31,12,8
+    EDITTEXT        IDC_EDIT_P1,52,29,175,14,ES_AUTOHSCROLL
+    LTEXT           "P2:",IDC_STATIC,36,49,12,8
+    EDITTEXT        IDC_EDIT_P2,52,47,175,14,ES_AUTOHSCROLL
+    CTEXT           "The Result:",IDC_STATIC,285,16,145,8
+    EDITTEXT        IDC_CALL_RESULT,285,29,144,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Call JavaScript Function",IDC_CALL_JS_FUNCTION,284,50,145,14
+    GROUPBOX        "Run a JavaScript from C++",IDC_STATIC,8,75,424,71
+    LTEXT           "The JavaScript:",IDC_STATIC,22,84,61,9
+    EDITTEXT        IDC_JAVASCRIPT_ENTRY,21,95,287,42,ES_AUTOHSCROLL
+    CTEXT           "The Result:",IDC_STATIC,328,87,98,8
+    EDITTEXT        IDC_RUN_RESULT,328,102,98,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Run JavaScript",IDC_RUN_JAVASCRIPT,328,122,100,14
+    GROUPBOX        "The WebView for running the JavaScripts:",IDC_WEBKIT_GROUP,8,151,424,228, 0, WS_EX_TRANSPARENT
+END
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_CALLJS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 8
+        RIGHTMARGIN, 432
+        BOTTOMMARGIN, 379
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About CallJS..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
